@@ -20,7 +20,7 @@ internal class TreinaFeature implements IFeatureLifecycle, IFeatureMetadata
     [Hookable(false)]
     public int module()
     {
-        return FeatureModuleV0::Other;
+        return FeatureModuleV0::AccountsReceivable;
     }
 
     [Hookable(false)]
