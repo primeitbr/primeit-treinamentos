@@ -1,0 +1,55 @@
+﻿using System.ComponentModel.Composition;
+using IFeatureLifecycle = Microsoft.Dynamics.ApplicationPlatform.FeatureExposure.IFeatureLifecycle;
+using IFeatureMetadata = Microsoft.Dynamics.ApplicationPlatform.FeatureExposure.IFeatureMetadata;
+using FeatureLifecycleStage = Microsoft.Dynamics.ApplicationPlatform.FeatureExposure.FeatureLifecycleStage;
+using PlatformStateProvider = Microsoft.Dynamics.ApplicationPlatform.FeatureExposure.FeatureStateProvider;
+
+internal class TreinaFeature implements IFeatureLifecycle, IFeatureMetadata
+{
+    public static TreinaFeature instance()
+    {
+        return new TreinaFeature();
+    }
+
+    [Hookable(false)]
+    public LabelId label()
+    {
+        return literalStr("TREINA Feature");
+    }
+
+    [Hookable(false)]
+    public int module()
+    {
+        return FeatureModuleV0::Other;
+    }
+
+    [Hookable(false)]
+    public LabelId summary()
+    {
+        return literalStr("Essa feature foi criada para utilização no treinamento de desenvolvimento Dynamics 365 Finance");
+    }
+
+    [Hookable(false)]
+    public WebSiteURL learnMoreUrl()
+    {
+        return "https://docs.microsoft.com/en-us/dynamics365/fin-ops-core/fin-ops/get-started/feature-management/feature-management-overview";
+    }
+
+    [Hookable(false)]
+    public boolean isEnabledByDefault()
+    {
+        return false;
+    }
+
+    [Hookable(false)]
+    public boolean canDisable()
+    {
+        return true;
+    }
+
+    public FeatureLifecycleStage FeatureStage()
+    {
+        return FeatureLifecycleStage::Released;
+    }
+
+}

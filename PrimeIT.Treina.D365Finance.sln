@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeIT.Treina.D365Finance"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeIT.Treina.D365Finance.ConsoleApp", "PrimeIT.Treina.D365Finance.ConsoleApp\PrimeIT.Treina.D365Finance.ConsoleApp.csproj", "{479F5CC9-C1CB-4AB0-9496-27FAC71F7AC5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutrosArtefatos", "OutrosArtefatos\OutrosArtefatos.csproj", "{440367B4-5CE0-430E-9B4A-E12CBD5A92AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{479F5CC9-C1CB-4AB0-9496-27FAC71F7AC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{479F5CC9-C1CB-4AB0-9496-27FAC71F7AC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{479F5CC9-C1CB-4AB0-9496-27FAC71F7AC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{440367B4-5CE0-430E-9B4A-E12CBD5A92AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{440367B4-5CE0-430E-9B4A-E12CBD5A92AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{440367B4-5CE0-430E-9B4A-E12CBD5A92AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{440367B4-5CE0-430E-9B4A-E12CBD5A92AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
