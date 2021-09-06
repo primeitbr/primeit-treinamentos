@@ -1,10 +1,8 @@
-﻿using System.ComponentModel.Composition;
-using IFeatureLifecycle = Microsoft.Dynamics.ApplicationPlatform.FeatureExposure.IFeatureLifecycle;
+using System.ComponentModel.Composition;
 using IFeatureMetadata = Microsoft.Dynamics.ApplicationPlatform.FeatureExposure.IFeatureMetadata;
-using FeatureLifecycleStage = Microsoft.Dynamics.ApplicationPlatform.FeatureExposure.FeatureLifecycleStage;
-using PlatformStateProvider = Microsoft.Dynamics.ApplicationPlatform.FeatureExposure.FeatureStateProvider;
 
-internal class TreinaFeature implements IFeatureLifecycle, IFeatureMetadata
+[ExportAttribute(identifierStr(Microsoft.Dynamics.ApplicationPlatform.FeatureExposure.IFeatureMetadata))]
+internal class TreinaFeature implements IFeatureMetadata
 {
     public static TreinaFeature instance()
     {
@@ -12,9 +10,9 @@ internal class TreinaFeature implements IFeatureLifecycle, IFeatureMetadata
     }
 
     [Hookable(false)]
-    public LabelId label()
+    public FeatureLabelId label()
     {
-        return literalStr("TREINA Feature");
+        return literalStr("@Treina:TreinaFeature");
     }
 
     [Hookable(false)]
@@ -45,11 +43,6 @@ internal class TreinaFeature implements IFeatureLifecycle, IFeatureMetadata
     public boolean canDisable()
     {
         return true;
-    }
-
-    public FeatureLifecycleStage FeatureStage()
-    {
-        return FeatureLifecycleStage::Released;
     }
 
 }
